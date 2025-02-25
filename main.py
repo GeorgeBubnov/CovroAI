@@ -5,11 +5,14 @@ main.py
 инициализирует API и предоставляет интерфейс для пользователя.
 """
 
+from network.structure import UXAnalyzer
+
 def start_services():
     """
     Инициализирует все модули системы.
     """
-    pass
+    global analyzer
+    analyzer = UXAnalyzer()
 
 def run_analysis(url):
     """
@@ -17,13 +20,14 @@ def run_analysis(url):
 
     :param url: URL анализируемого сайта.
     """
-    pass
 
 def main():
     """
     Основная точка входа в приложение.
     """
     start_services()
+    data = "current user"
+    analyzer.analyze_user_behavior(data)
 
 if __name__ == "__main__":
     main()
