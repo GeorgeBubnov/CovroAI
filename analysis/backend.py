@@ -16,7 +16,9 @@ class Backend:
         Обрабатывает входные данные.
 
         :param raw_data: Сырой HTML или JSON с сайта.
+        :type raw_data: str
         :return: Обработанные данные.
+        :rtype: dict
         """
         return {"processed": True, "data": raw_data}
 
@@ -25,7 +27,9 @@ class Backend:
         Сохраняет данные в памяти.
 
         :param key: Ключ для хранения данных.
+        :type key: str
         :param value: Значение.
+        :type value: any
         """
         self.data_storage[key] = value
         print(f"Данные сохранены под ключом {key}")
@@ -35,6 +39,8 @@ class Backend:
         Получает данные по ключу.
 
         :param key: Ключ.
+        :type key: str
         :return: Запрашиваемые данные.
+        :rtype: any
         """
         return self.data_storage.get(key, "Нет данных")

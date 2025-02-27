@@ -14,7 +14,9 @@ class SpeedAnalyzer:
         Измеряет скорость загрузки страницы.
 
         :param url: URL сайта.
+        :type url: str
         :return: Время загрузки в секундах.
+        :rtype: float
         """
         return 2.3
 
@@ -23,7 +25,9 @@ class SpeedAnalyzer:
         Выявляет элементы, замедляющие рендеринг.
 
         :param html: HTML-код сайта.
+        :type html: str
         :return: Список проблемных элементов.
+        :rtype: list
         """
         return ["Большой JavaScript-файл", "Неоптимизированные изображения"]
 
@@ -32,6 +36,8 @@ class SpeedAnalyzer:
         Проверяет, адаптирован ли сайт для мобильных устройств.
 
         :param url: URL сайта.
+        :type url: str
         :return: Статус адаптивности.
+        :rtype: str
         """
         return "Сайт полностью адаптивен."

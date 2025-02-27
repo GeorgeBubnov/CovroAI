@@ -20,6 +20,7 @@ class Dashboard:
         Отображает ключевые показатели.
 
         :param data: Словарь с метриками сайта.
+        :type data: dict
         """
         print("Отображение ключевых показателей...")
         plt.figure()
@@ -31,6 +32,9 @@ class Dashboard:
         Создает текстовый отчет по аналитике.
 
         :param data: Словарь с аналитикой.
+        :type data: dict
+        :return: Текстовый отчет.
+        :rtype: str
         """
         report = f"Трафик: {data.get('traffic', 0)}\nПоказатель отказов: {data.get('bounce_rate', 0)}%"
         print(report)
@@ -41,7 +45,9 @@ class Dashboard:
         Экспортирует данные в CSV-файл.
 
         :param data: Словарь с аналитикой.
+        :type data: dict
         :param filename: Название файла.
+        :type filename: str
         """
         with open(filename, "w", newline="") as file:
             writer = csv.writer(file)

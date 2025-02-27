@@ -20,6 +20,9 @@ def index():
 def get_user_input():
     """
     Получает данные от пользователя.
+
+    :return: JSON-ответ о статусе приёма данных.
+    :rtype: dict
     """
     data = request.json
     return {"status": "received", "data": data}
@@ -28,6 +31,9 @@ def get_user_input():
 def send_feedback():
     """
     Отправляет обратную связь от пользователя.
+
+    :return: JSON-ответ о статусе приёма обратной связи.
+    :rtype: dict
     """
     feedback = request.json
     return {"status": "feedback received", "message": feedback}

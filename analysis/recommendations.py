@@ -14,7 +14,9 @@ class RecommendationEngine:
         Генерирует рекомендации на основе анализа сайта.
 
         :param site_data: Данные о сайте.
+        :type site_data: dict
         :return: Список рекомендаций.
+        :rtype: list[str]
         """
         return ["Добавить CTA-кнопки", "Оптимизировать заголовки", "Ускорить загрузку страниц"]
 
@@ -23,7 +25,9 @@ class RecommendationEngine:
         Приоритизирует рекомендации по их влиянию на конверсию.
 
         :param recommendations: Список рекомендаций.
+        :type recommendations: list[str]
         :return: Отсортированный список рекомендаций.
+        :rtype: list[str]
         """
         return sorted(recommendations, key=lambda x: len(x), reverse=True)
 

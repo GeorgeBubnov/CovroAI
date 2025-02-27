@@ -18,6 +18,7 @@ class ReportGenerator:
         Генерирует PDF-отчет на основе собранных данных.
 
         :param data: Словарь с аналитикой.
+        :type data: dict
         """
         pdfkit.from_string(str(data), "report.pdf")
         print("PDF-отчет создан.")
@@ -27,7 +28,9 @@ class ReportGenerator:
         Создает отчет в формате Excel.
 
         :param data: Словарь с аналитикой.
+        :type data: dict
         :param filename: Название файла.
+        :type filename: str
         """
         import pandas as pd
         df = pd.DataFrame([data])
@@ -39,6 +42,8 @@ class ReportGenerator:
         Отправляет отчет по электронной почте.
 
         :param recipient_email: Email получателя.
+        :type recipient_email: str
         :param filename: Имя файла отчета.
+        :type filename: str
         """
         print(f"Отчет {filename} отправлен на {recipient_email}")

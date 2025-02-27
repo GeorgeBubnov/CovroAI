@@ -17,7 +17,9 @@ class Parser:
         Загружает HTML-код страницы.
 
         :param url: URL целевого сайта.
+        :type url: str
         :return: HTML-код страницы.
+        :rtype: str | None
         """
         response = requests.get(url)
         return response.text if response.status_code == 200 else None
@@ -27,7 +29,9 @@ class Parser:
         Извлекает текстовое содержимое страницы.
 
         :param html: HTML-код страницы.
+        :type html: str
         :return: Текстовое содержимое.
+        :rtype: str
         """
         soup = BeautifulSoup(html, "html.parser")
         return soup.get_text()
@@ -37,7 +41,9 @@ class Parser:
         Извлекает URL изображений с веб-страницы.
 
         :param html: HTML-код страницы.
+        :type html: str
         :return: Список URL изображений.
+        :rtype: list[str]
         """
         soup = BeautifulSoup(html, "html.parser")
         return [img["src"] for img in soup.find_all("img") if "src" in img.attrs]
@@ -47,7 +53,9 @@ class Parser:
         Анализирует частоту ключевых слов на странице.
 
         :param text: Текстовое содержимое сайта.
+        :type text: str
         :return: Словарь с частотой слов.
+        :rtype: dict[str, int]
         """
         words = text.split()
         word_freq = {word: words.count(word) for word in set(words)}
