@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>analysis.services module &mdash; документация CorvoAI 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e35015f7"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=9bfe3ffa"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Interface package - Интерфейс пользователя" href="interface.html" />
+    <link rel="prev" title="analysis.recommendations module" href="analysis.recommendations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CorvoAI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">CovroAI</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="analysis.html">Analysis package - Работа с сайтами</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="analysis.backend.html">analysis.backend module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.parsing.html">analysis.parsing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.recommendations.html">analysis.recommendations module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">analysis.services module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#analysis.services.ExternalServices"><code class="docutils literal notranslate"><span class="pre">ExternalServices</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="interface.html">Interface package - Интерфейс пользователя</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">Main module - Главный исполнимый модуль</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html">Network package - Работа с нейронной сетью</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CorvoAI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">CovroAI</a></li>
+          <li class="breadcrumb-item"><a href="analysis.html">Analysis package - Работа с сайтами</a></li>
+      <li class="breadcrumb-item active">analysis.services module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/analysis.services.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-analysis.services">
+<span id="analysis-services-module"></span><h1>analysis.services module<a class="headerlink" href="#module-analysis.services" title="Ссылка на этот заголовок"></a></h1>
+<p>services.py</p>
+<p>Модуль интеграции с внешними сервисами (Google Analytics, Facebook Ads и др.).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="analysis.services.ExternalServices">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">analysis.services.</span></span><span class="sig-name descname"><span class="pre">ExternalServices</span></span><a class="headerlink" href="#analysis.services.ExternalServices" title="Link to this definition"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.services.ExternalServices.fetch_analytics">
+<span class="sig-name descname"><span class="pre">fetch_analytics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.services.ExternalServices.fetch_analytics" title="Link to this definition"></a></dt>
+<dd><p>Получает метрики из Google Analytics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>site_id</strong> (<em>str</em>) – Идентификатор сайта в Google Analytics.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Данные аналитики.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.services.ExternalServices.fetch_competitor_data">
+<span class="sig-name descname"><span class="pre">fetch_competitor_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">competitor_url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.services.ExternalServices.fetch_competitor_data" title="Link to this definition"></a></dt>
+<dd><p>Получает информацию о сайте конкурента.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>competitor_url</strong> (<em>str</em>) – URL сайта конкурента.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Анализ данных конкурента.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.services.ExternalServices.fetch_facebook_ads_data">
+<span class="sig-name descname"><span class="pre">fetch_facebook_ads_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">campaign_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.services.ExternalServices.fetch_facebook_ads_data" title="Link to this definition"></a></dt>
+<dd><p>Получает данные о рекламной кампании из Facebook Ads.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>campaign_id</strong> (<em>str</em>) – ID рекламной кампании.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Данные о рекламе.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="analysis.recommendations.html" class="btn btn-neutral float-left" title="analysis.recommendations module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="interface.html" class="btn btn-neutral float-right" title="Interface package - Интерфейс пользователя" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, George Bubnov. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
