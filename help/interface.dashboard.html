@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>interface.dashboard module &mdash; документация CovroAI 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="interface.frontend module" href="interface.frontend.html" />
+    <link rel="prev" title="Interface package - Интерфейс пользователя" href="interface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+ 
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-interface.dashboard">
+<span id="interface-dashboard-module"></span><h1>interface.dashboard module<a class="headerlink" href="#module-interface.dashboard" title="Ссылка на этот заголовок"></a></h1>
+<p>dashboard.py</p>
+<p>Модуль визуализации данных и статистики.
+Отображает графики, диаграммы и основные метрики.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="interface.dashboard.Dashboard">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">interface.dashboard.</span></span><span class="sig-name descname"><span class="pre">Dashboard</span></span><a class="headerlink" href="#interface.dashboard.Dashboard" title="Link to this definition"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="interface.dashboard.Dashboard.display_metrics">
+<span class="sig-name descname"><span class="pre">display_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#interface.dashboard.Dashboard.display_metrics" title="Link to this definition"></a></dt>
+<dd><p>Отображает ключевые показатели.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Словарь с метриками сайта.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="interface.dashboard.Dashboard.export_to_csv">
+<span class="sig-name descname"><span class="pre">export_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'report.csv'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#interface.dashboard.Dashboard.export_to_csv" title="Link to this definition"></a></dt>
+<dd><p>Экспортирует данные в CSV-файл.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Словарь с аналитикой.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – Название файла.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="interface.dashboard.Dashboard.generate_report">
+<span class="sig-name descname"><span class="pre">generate_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#interface.dashboard.Dashboard.generate_report" title="Link to this definition"></a></dt>
+<dd><p>Создает текстовый отчет по аналитике.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Словарь с аналитикой.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Текстовый отчет.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, George Bubnov. </p>
+  </div>
+
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

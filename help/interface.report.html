@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>interface.report module &mdash; документация CovroAI 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Main module - Главный исполнимый модуль" href="main.html" />
+    <link rel="prev" title="interface.frontend module" href="interface.frontend.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+ 
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-interface.report">
+<span id="interface-report-module"></span><h1>interface.report module<a class="headerlink" href="#module-interface.report" title="Ссылка на этот заголовок"></a></h1>
+<p>report.py</p>
+<p>Формирует отчеты в формате PDF, Excel и других.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="interface.report.ReportGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">interface.report.</span></span><span class="sig-name descname"><span class="pre">ReportGenerator</span></span><a class="headerlink" href="#interface.report.ReportGenerator" title="Link to this definition"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="interface.report.ReportGenerator.generate_excel">
+<span class="sig-name descname"><span class="pre">generate_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'report.xlsx'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#interface.report.ReportGenerator.generate_excel" title="Link to this definition"></a></dt>
+<dd><p>Создает отчет в формате Excel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Словарь с аналитикой.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – Название файла.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="interface.report.ReportGenerator.generate_pdf">
+<span class="sig-name descname"><span class="pre">generate_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#interface.report.ReportGenerator.generate_pdf" title="Link to this definition"></a></dt>
+<dd><p>Генерирует PDF-отчет на основе собранных данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Словарь с аналитикой.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="interface.report.ReportGenerator.send_report_via_email">
+<span class="sig-name descname"><span class="pre">send_report_via_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recipient_email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'report.pdf'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#interface.report.ReportGenerator.send_report_via_email" title="Link to this definition"></a></dt>
+<dd><p>Отправляет отчет по электронной почте.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>recipient_email</strong> (<em>str</em>) – Email получателя.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – Имя файла отчета.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, George Bubnov. </p>
+  </div>
+
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

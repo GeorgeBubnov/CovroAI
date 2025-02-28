@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>analysis.parsing module &mdash; документация CovroAI 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="analysis.recommendations module" href="analysis.recommendations.html" />
+    <link rel="prev" title="analysis.backend module" href="analysis.backend.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+ 
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-analysis.parsing">
+<span id="analysis-parsing-module"></span><h1>analysis.parsing module<a class="headerlink" href="#module-analysis.parsing" title="Ссылка на этот заголовок"></a></h1>
+<p>parsing.py</p>
+<p>Модуль сбора данных: парсинг HTML, извлечение текста и изображений.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="analysis.parsing.Parser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">analysis.parsing.</span></span><span class="sig-name descname"><span class="pre">Parser</span></span><a class="headerlink" href="#analysis.parsing.Parser" title="Link to this definition"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.parsing.Parser.analyze_keywords">
+<span class="sig-name descname"><span class="pre">analyze_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.parsing.Parser.analyze_keywords" title="Link to this definition"></a></dt>
+<dd><p>Анализирует частоту ключевых слов на странице.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Текстовое содержимое сайта.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь с частотой слов.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.parsing.Parser.extract_images">
+<span class="sig-name descname"><span class="pre">extract_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.parsing.Parser.extract_images" title="Link to this definition"></a></dt>
+<dd><p>Извлекает URL изображений с веб-страницы.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>html</strong> (<em>str</em>) – HTML-код страницы.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Список URL изображений.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.parsing.Parser.fetch_html">
+<span class="sig-name descname"><span class="pre">fetch_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.parsing.Parser.fetch_html" title="Link to this definition"></a></dt>
+<dd><p>Загружает HTML-код страницы.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – URL целевого сайта.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>HTML-код страницы.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.parsing.Parser.parse_content">
+<span class="sig-name descname"><span class="pre">parse_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.parsing.Parser.parse_content" title="Link to this definition"></a></dt>
+<dd><p>Извлекает текстовое содержимое страницы.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>html</strong> (<em>str</em>) – HTML-код страницы.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Текстовое содержимое.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, George Bubnov. </p>
+  </div>
+
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+</body>
+</html>

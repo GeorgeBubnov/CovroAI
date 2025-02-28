@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>network.speed module &mdash; документация CovroAI 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="network.structure module" href="network.structure.html" />
+    <link rel="prev" title="Network package - Работа с нейронной сетью" href="network.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+ 
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-network.speed">
+<span id="network-speed-module"></span><h1>network.speed module<a class="headerlink" href="#module-network.speed" title="Ссылка на этот заголовок"></a></h1>
+<p>speed.py</p>
+<p>Модуль анализа скорости загрузки и адаптивности сайта.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="network.speed.SpeedAnalyzer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">network.speed.</span></span><span class="sig-name descname"><span class="pre">SpeedAnalyzer</span></span><a class="headerlink" href="#network.speed.SpeedAnalyzer" title="Link to this definition"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="network.speed.SpeedAnalyzer.detect_render_blocking_elements">
+<span class="sig-name descname"><span class="pre">detect_render_blocking_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.speed.SpeedAnalyzer.detect_render_blocking_elements" title="Link to this definition"></a></dt>
+<dd><p>Выявляет элементы, замедляющие рендеринг.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>html</strong> (<em>str</em>) – HTML-код сайта.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Список проблемных элементов.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.speed.SpeedAnalyzer.measure_loading_time">
+<span class="sig-name descname"><span class="pre">measure_loading_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.speed.SpeedAnalyzer.measure_loading_time" title="Link to this definition"></a></dt>
+<dd><p>Измеряет скорость загрузки страницы.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – URL сайта.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Время загрузки в секундах.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.speed.SpeedAnalyzer.test_mobile_compatibility">
+<span class="sig-name descname"><span class="pre">test_mobile_compatibility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.speed.SpeedAnalyzer.test_mobile_compatibility" title="Link to this definition"></a></dt>
+<dd><p>Проверяет, адаптирован ли сайт для мобильных устройств.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – URL сайта.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Статус адаптивности.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, George Bubnov. </p>
+  </div>
+
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

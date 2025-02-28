@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CovroAI &mdash; документация CovroAI 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Analysis package - Работа с сайтами" href="analysis.html" />
+    <link rel="prev" title="CovroAI documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="covroai">
+<h1>CovroAI<a class="headerlink" href="#covroai" title="Ссылка на этот заголовок"></a></h1>
+<p>Разработанный продукт представляет собой аналитическую платформу для анализа веб-сайтов, включающую модули анализа скорости загрузки, удобства пользовательского интерфейса (UX/UI), эффективности конверсии и интеграции с внешними сервисами.</p>
+<p>Платформа предназначена для владельцев сайтов, маркетологов и разработчиков, которым необходимо повысить производительность и удобство своих веб-ресурсов.</p>
+<p>Основная цель платформы — предоставление детализированных отчетов о работе сайтов, включая технические аспекты, взаимодействие пользователей и сравнительный анализ конкурентов. Благодаря встроенным инструментам анализа и рекомендациям, пользователи могут быстро выявлять узкие места в своих проектах и внедрять улучшения.</p>
+<p>Приложение поддерживает интеграцию с популярными сервисами, такими как Google Analytics и Яндекс.Метрика, что позволяет получать более полные данные.</p>
+<p>Платформа реализована на основе Python с использованием популярных библиотек для анализа данных (pandas, BeautifulSoup, requests), а визуализация результатов осуществляется с помощью matplotlib и Flask для веб-интерфейса. Пользователи могут взаимодействовать с системой как через веб-приложение, так и через API, что делает продукт гибким и удобным для различных сценариев применения.</p>
+<hr class="docutils" />
+<p>Примеры сценариев использования</p>
+<ol class="arabic simple">
+<li><p>Анализ скорости загрузки сайта</p></li>
+</ol>
+<p>Приложение позволяет проверить, насколько быстро загружается веб-страница, а также выявить проблемные элементы.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">speed</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpeedAnalyzer</span>
+
+<span class="n">analyzer</span> <span class="o">=</span> <span class="n">SpeedAnalyzer</span><span class="p">()</span>
+<span class="n">loading_time</span> <span class="o">=</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">measure_loading_time</span><span class="p">(</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Время загрузки: </span><span class="si">{</span><span class="n">loading_time</span><span class="si">}</span><span class="s2"> секунд&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>HTML-вывод в веб-интерфейсе:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="n">Анализ</span> <span class="n">скорости</span> <span class="n">загрузки</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Время</span> <span class="n">загрузки</span><span class="p">:</span> <span class="mf">2.3</span> <span class="n">секунд</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Анализ пользовательского поведения</p></li>
+</ol>
+<p>Этот сценарий позволяет изучить, какие страницы посещают пользователи и как долго они на них остаются.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">analysis</span><span class="w"> </span><span class="kn">import</span> <span class="n">UXAnalyzer</span>
+
+<span class="n">ux</span> <span class="o">=</span> <span class="n">UXAnalyzer</span><span class="p">()</span>
+<span class="n">user_behavior</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">analyze_user_behavior</span><span class="p">({</span><span class="s2">&quot;clicks&quot;</span><span class="p">:</span> <span class="mi">250</span><span class="p">,</span> <span class="s2">&quot;session_time&quot;</span><span class="p">:</span> <span class="s2">&quot;3 min&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user_behavior</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>HTML-вывод:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="n">Анализ</span> <span class="n">поведения</span> <span class="n">пользователей</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Среднее</span> <span class="n">время</span> <span class="n">на</span> <span class="n">сайте</span><span class="p">:</span> <span class="mi">3</span> <span class="n">минуты</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Сравнительный анализ с конкурентами</p></li>
+</ol>
+<p>Приложение позволяет сравнить метрики анализируемого сайта с конкурентами, выявляя сильные и слабые стороны.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">success</span><span class="w"> </span><span class="kn">import</span> <span class="n">SuccessAnalyzer</span>
+
+<span class="n">analyzer</span> <span class="o">=</span> <span class="n">SuccessAnalyzer</span><span class="p">()</span>
+<span class="n">comparison</span> <span class="o">=</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">analyze_top_sites</span><span class="p">(</span><span class="s2">&quot;e-commerce&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ключевые факторы успеха:&quot;</span><span class="p">,</span> <span class="n">comparison</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>HTML-вывод:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="n">Сравнение</span> <span class="n">с</span> <span class="n">конкурентами</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="n">Простая</span> <span class="n">навигация</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="n">Оптимизированные</span> <span class="n">заголовки</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="n">Быстрая</span> <span class="n">загрузка</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Разработанный продукт является универсальным инструментом для веб-аналитики, позволяющим автоматизировать процесс исследования сайтов, улучшать пользовательский опыт и повышать конверсию. Благодаря гибкости системы и удобному интерфейсу пользователи могут оперативно получать нужную информацию и адаптировать свои проекты под современные требования рынка.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis package - Работа с сайтами</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="analysis.backend.html">analysis.backend module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="analysis.backend.html#analysis.backend.Backend"><code class="docutils literal notranslate"><span class="pre">Backend</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="analysis.backend.html#analysis.backend.Backend.fetch_data"><code class="docutils literal notranslate"><span class="pre">Backend.fetch_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="analysis.backend.html#analysis.backend.Backend.process_data"><code class="docutils literal notranslate"><span class="pre">Backend.process_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="analysis.backend.html#analysis.backend.Backend.store_data"><code class="docutils literal notranslate"><span class="pre">Backend.store_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.parsing.html">analysis.parsing module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="analysis.parsing.html#analysis.parsing.Parser"><code class="docutils literal notranslate"><span class="pre">Parser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="analysis.parsing.html#analysis.parsing.Parser.analyze_keywords"><code class="docutils literal notranslate"><span class="pre">Parser.analyze_keywords()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="analysis.parsing.html#analysis.parsing.Parser.extract_images"><code class="docutils literal notranslate"><span class="pre">Parser.extract_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="analysis.parsing.html#analysis.parsing.Parser.fetch_html"><code class="docutils literal notranslate"><span class="pre">Parser.fetch_html()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="analysis.parsing.html#analysis.parsing.Parser.parse_content"><code class="docutils literal notranslate"><span class="pre">Parser.parse_content()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.recommendations.html">analysis.recommendations module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="analysis.recommendations.html#analysis.recommendations.RecommendationEngine"><code class="docutils literal notranslate"><span class="pre">RecommendationEngine</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="analysis.recommendations.html#analysis.recommendations.RecommendationEngine.compare_with_competitors"><code class="docutils literal notranslate"><span class="pre">RecommendationEngine.compare_with_competitors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="analysis.recommendations.html#analysis.recommendations.RecommendationEngine.generate_recommendations"><code class="docutils literal notranslate"><span class="pre">RecommendationEngine.generate_recommendations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="analysis.recommendations.html#analysis.recommendations.RecommendationEngine.prioritize_recommendations"><code class="docutils literal notranslate"><span class="pre">RecommendationEngine.prioritize_recommendations()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.services.html">analysis.services module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="analysis.services.html#analysis.services.ExternalServices"><code class="docutils literal notranslate"><span class="pre">ExternalServices</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="analysis.services.html#analysis.services.ExternalServices.fetch_analytics"><code class="docutils literal notranslate"><span class="pre">ExternalServices.fetch_analytics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="analysis.services.html#analysis.services.ExternalServices.fetch_competitor_data"><code class="docutils literal notranslate"><span class="pre">ExternalServices.fetch_competitor_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="analysis.services.html#analysis.services.ExternalServices.fetch_facebook_ads_data"><code class="docutils literal notranslate"><span class="pre">ExternalServices.fetch_facebook_ads_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">Interface package - Интерфейс пользователя</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interface.dashboard.html">interface.dashboard module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="interface.dashboard.html#interface.dashboard.Dashboard"><code class="docutils literal notranslate"><span class="pre">Dashboard</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="interface.dashboard.html#interface.dashboard.Dashboard.display_metrics"><code class="docutils literal notranslate"><span class="pre">Dashboard.display_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="interface.dashboard.html#interface.dashboard.Dashboard.export_to_csv"><code class="docutils literal notranslate"><span class="pre">Dashboard.export_to_csv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="interface.dashboard.html#interface.dashboard.Dashboard.generate_report"><code class="docutils literal notranslate"><span class="pre">Dashboard.generate_report()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="interface.frontend.html">interface.frontend module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="interface.frontend.html#interface.frontend.get_user_input"><code class="docutils literal notranslate"><span class="pre">get_user_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface.frontend.html#interface.frontend.index"><code class="docutils literal notranslate"><span class="pre">index()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface.frontend.html#interface.frontend.send_feedback"><code class="docutils literal notranslate"><span class="pre">send_feedback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface.frontend.html#interface.frontend.start_frontend"><code class="docutils literal notranslate"><span class="pre">start_frontend()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="interface.report.html">interface.report module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="interface.report.html#interface.report.ReportGenerator"><code class="docutils literal notranslate"><span class="pre">ReportGenerator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="interface.report.html#interface.report.ReportGenerator.generate_excel"><code class="docutils literal notranslate"><span class="pre">ReportGenerator.generate_excel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="interface.report.html#interface.report.ReportGenerator.generate_pdf"><code class="docutils literal notranslate"><span class="pre">ReportGenerator.generate_pdf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="interface.report.html#interface.report.ReportGenerator.send_report_via_email"><code class="docutils literal notranslate"><span class="pre">ReportGenerator.send_report_via_email()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main module - Главный исполнимый модуль</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html#main.run_analysis"><code class="docutils literal notranslate"><span class="pre">run_analysis()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html#main.start_services"><code class="docutils literal notranslate"><span class="pre">start_services()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="network.html">Network package - Работа с нейронной сетью</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="network.speed.html">network.speed module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="network.speed.html#network.speed.SpeedAnalyzer"><code class="docutils literal notranslate"><span class="pre">SpeedAnalyzer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="network.speed.html#network.speed.SpeedAnalyzer.detect_render_blocking_elements"><code class="docutils literal notranslate"><span class="pre">SpeedAnalyzer.detect_render_blocking_elements()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="network.speed.html#network.speed.SpeedAnalyzer.measure_loading_time"><code class="docutils literal notranslate"><span class="pre">SpeedAnalyzer.measure_loading_time()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="network.speed.html#network.speed.SpeedAnalyzer.test_mobile_compatibility"><code class="docutils literal notranslate"><span class="pre">SpeedAnalyzer.test_mobile_compatibility()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="network.structure.html">network.structure module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="network.structure.html#network.structure.UXAnalyzer"><code class="docutils literal notranslate"><span class="pre">UXAnalyzer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="network.structure.html#network.structure.UXAnalyzer.analyze_user_behavior"><code class="docutils literal notranslate"><span class="pre">UXAnalyzer.analyze_user_behavior()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="network.structure.html#network.structure.UXAnalyzer.evaluate_ui_readability"><code class="docutils literal notranslate"><span class="pre">UXAnalyzer.evaluate_ui_readability()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="network.structure.html#network.structure.UXAnalyzer.track_user_flow"><code class="docutils literal notranslate"><span class="pre">UXAnalyzer.track_user_flow()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="network.success.html">network.success module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="network.success.html#network.success.SuccessAnalyzer"><code class="docutils literal notranslate"><span class="pre">SuccessAnalyzer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="network.success.html#network.success.SuccessAnalyzer.analyze_top_sites"><code class="docutils literal notranslate"><span class="pre">SuccessAnalyzer.analyze_top_sites()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="network.success.html#network.success.SuccessAnalyzer.identify_conversion_drivers"><code class="docutils literal notranslate"><span class="pre">SuccessAnalyzer.identify_conversion_drivers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="network.success.html#network.success.SuccessAnalyzer.run_ab_tests"><code class="docutils literal notranslate"><span class="pre">SuccessAnalyzer.run_ab_tests()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, George Bubnov. </p>
+  </div>
+
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

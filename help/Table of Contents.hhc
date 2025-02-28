@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CovroAI">
+		<param name="Local" value="modules.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Analysis package - &Dstrok;&agrave;&aacute;&icirc;&ograve;&agrave; &ntilde; &ntilde;&agrave;&eacute;&ograve;&agrave;&igrave;&egrave;">
+			<param name="Local" value="analysis.html">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="analysis.backend module">
+				<param name="Local" value="analysis.backend.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="analysis.parsing module">
+				<param name="Local" value="analysis.parsing.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="analysis.recommendations module">
+				<param name="Local" value="analysis.recommendations.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="analysis.services module">
+				<param name="Local" value="analysis.services.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Interface package - &Egrave;&iacute;&ograve;&aring;&eth;&ocirc;&aring;&eacute;&ntilde; &iuml;&icirc;&euml;&uuml;&ccedil;&icirc;&acirc;&agrave;&ograve;&aring;&euml;&yuml;">
+			<param name="Local" value="interface.html">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="interface.report module">
+				<param name="Local" value="interface.report.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="interface.dashboard module">
+				<param name="Local" value="interface.dashboard.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="interface.frontend module">
+				<param name="Local" value="interface.frontend.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Main module - &Atilde;&euml;&agrave;&acirc;&iacute;&ucirc;&eacute; &egrave;&ntilde;&iuml;&icirc;&euml;&iacute;&egrave;&igrave;&ucirc;&eacute; &igrave;&icirc;&auml;&oacute;&euml;&uuml;">
+			<param name="Local" value="main.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Network package - &Dstrok;&agrave;&aacute;&icirc;&ograve;&agrave; &ntilde; &iacute;&aring;&eacute;&eth;&icirc;&iacute;&iacute;&icirc;&eacute; &ntilde;&aring;&ograve;&uuml;&thorn;">
+			<param name="Local" value="network.html">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="network.speed module">
+				<param name="Local" value="network.speed.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="network.structure module">
+				<param name="Local" value="network.structure.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="network.success module">
+				<param name="Local" value="network.success.html">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

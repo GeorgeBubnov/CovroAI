@@ -1,0 +1,27 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=CovroAI.chm
+Contents file=Table of Contents.hhc
+Display compile progress=No
+Language=0x419 ������� (������)
+
+
+[FILES]
+modules.html
+analysis.backend.html
+analysis.html
+analysis.parsing.html
+analysis.recommendations.html
+analysis.services.html
+interface.dashboard.html
+interface.frontend.html
+interface.html
+interface.report.html
+main.html
+network.html
+network.speed.html
+network.structure.html
+network.success.html
+
+[INFOTYPES]
+

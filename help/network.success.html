@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>network.success module &mdash; документация CovroAI 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="network.structure module" href="network.structure.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+ 
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-network.success">
+<span id="network-success-module"></span><h1>network.success module<a class="headerlink" href="#module-network.success" title="Ссылка на этот заголовок"></a></h1>
+<p>success.py</p>
+<p>Модуль анализа успешных сайтов (поиск закономерностей для роста конверсии).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="network.success.SuccessAnalyzer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">network.success.</span></span><span class="sig-name descname"><span class="pre">SuccessAnalyzer</span></span><a class="headerlink" href="#network.success.SuccessAnalyzer" title="Link to this definition"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="network.success.SuccessAnalyzer.analyze_top_sites">
+<span class="sig-name descname"><span class="pre">analyze_top_sites</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">industry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.success.SuccessAnalyzer.analyze_top_sites" title="Link to this definition"></a></dt>
+<dd><p>Анализирует успешные сайты в нише.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>industry</strong> (<em>str</em>) – Тематика сайтов.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Выводы по ключевым факторам успеха.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.success.SuccessAnalyzer.identify_conversion_drivers">
+<span class="sig-name descname"><span class="pre">identify_conversion_drivers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.success.SuccessAnalyzer.identify_conversion_drivers" title="Link to this definition"></a></dt>
+<dd><p>Выявляет элементы сайта, влияющие на конверсию.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>site_data</strong> (<em>dict</em>) – Данные сайта.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Список ключевых факторов.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.success.SuccessAnalyzer.run_ab_tests">
+<span class="sig-name descname"><span class="pre">run_ab_tests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variant_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variant_b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.success.SuccessAnalyzer.run_ab_tests" title="Link to this definition"></a></dt>
+<dd><p>Проводит A/B тестирование различных версий сайта.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>variant_a</strong> (<em>dict</em>) – Первая версия страницы.</p></li>
+<li><p><strong>variant_b</strong> (<em>dict</em>) – Вторая версия страницы.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результаты тестирования.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, George Bubnov. </p>
+  </div>
+
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

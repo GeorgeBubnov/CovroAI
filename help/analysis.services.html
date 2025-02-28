@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>analysis.services module &mdash; документация CovroAI 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Interface package - Интерфейс пользователя" href="interface.html" />
+    <link rel="prev" title="analysis.recommendations module" href="analysis.recommendations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+ 
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-analysis.services">
+<span id="analysis-services-module"></span><h1>analysis.services module<a class="headerlink" href="#module-analysis.services" title="Ссылка на этот заголовок"></a></h1>
+<p>services.py</p>
+<p>Модуль интеграции с внешними сервисами (Google Analytics, Facebook Ads и др.).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="analysis.services.ExternalServices">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">analysis.services.</span></span><span class="sig-name descname"><span class="pre">ExternalServices</span></span><a class="headerlink" href="#analysis.services.ExternalServices" title="Link to this definition"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.services.ExternalServices.fetch_analytics">
+<span class="sig-name descname"><span class="pre">fetch_analytics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.services.ExternalServices.fetch_analytics" title="Link to this definition"></a></dt>
+<dd><p>Получает метрики из Google Analytics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>site_id</strong> (<em>str</em>) – Идентификатор сайта в Google Analytics.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Данные аналитики.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.services.ExternalServices.fetch_competitor_data">
+<span class="sig-name descname"><span class="pre">fetch_competitor_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">competitor_url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.services.ExternalServices.fetch_competitor_data" title="Link to this definition"></a></dt>
+<dd><p>Получает информацию о сайте конкурента.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>competitor_url</strong> (<em>str</em>) – URL сайта конкурента.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Анализ данных конкурента.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="analysis.services.ExternalServices.fetch_facebook_ads_data">
+<span class="sig-name descname"><span class="pre">fetch_facebook_ads_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">campaign_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.services.ExternalServices.fetch_facebook_ads_data" title="Link to this definition"></a></dt>
+<dd><p>Получает данные о рекламной кампании из Facebook Ads.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>campaign_id</strong> (<em>str</em>) – ID рекламной кампании.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Данные о рекламе.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, George Bubnov. </p>
+  </div>
+
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
