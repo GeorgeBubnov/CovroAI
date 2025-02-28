@@ -10,7 +10,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath("../.."))  # Поднимаемся на уровень выше, если main.py в корне проекта
 
-project = 'CorvoAI'
+project = 'CovroAI'
 copyright = '2025, George Bubnov'
 author = 'George Bubnov'
 release = '1.0.0'

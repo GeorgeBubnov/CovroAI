@@ -1,12 +1,12 @@
-.. CorvoAI documentation master file, created by
+.. CovroAI documentation master file, created by
    sphinx-quickstart on Thu Feb 27 11:44:52 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-CorvoAI documentation
+CovroAI documentation
 =====================
 
-Документация к проекту CorvoAI - Conversion Rate Optimization Artificial intelligence
+Документация к проекту CovroAI - Conversion Rate Optimization Artificial intelligence
 
 
 .. toctree::
